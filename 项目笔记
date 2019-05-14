@@ -1,0 +1,52 @@
+for /r %i in (*.lastUpdated) do del %i
+在cmd中 进入maven仓库，执行以上命令可以删除 下载失败的Jar
+
+Dao:
+    JPQL: select 属性名from 类
+    SQL: select 字段名  from  表
+
+网关保护机制：
+
+熔断保护机制：
+
+认证保护机制：
+	a.小型Web项目：
+		session-cookie
+		APP 手机软件  小程序
+
+	b.大型项目：
+		token令牌机制，基于算法
+		jwt：json web token
+			a.头部head
+			b.公共声明/私有声明
+			c.签证
+				i.  head
+				ii. 负载payload
+				iii.secret(盐)  （head+payload的组合）
+
+@Transactional
+    一个业务要么成功要么失败，在service里加
+@RequestMapping (method = RequestMethod.Get)
+    默认为：Get方式  <a herf="..."></a>形式默认为Get请求
+    Post、Delete、Put、Get 对应于 增、删、改、查
+    1、加在类上面：前端发来的请求先匹配类上的@RequestMapping，再匹配方法前的@RequestMapping。
+    2、加在方法上面：绑定一个请求映射
+@PathVariable
+    用来获取请求路径中的动态参数
+    @RequestMapping(value = "findLabelById/{id}",method = RequestMethod.GET)
+        public Result findLabelById(@PathVariable String id){
+            return new Result(...);
+        }
+@RequestParam
+    用于接受前端请求中的数据
+        前端：
+            <a href="FirstSpringDemo/requestParam?name=zhangsan&age=23">
+            TestRequestParam
+            </a>
+        使用@RequestParam注解接收请求参数
+             @RequestMapping("/requestParam")
+             public String requestParam(@RequestParam(value="name") String name, @RequestParam(value="age") Integer age)
+             {
+                System.out.println("name: " + name + "   age: " + age);
+             }
+    通过@RequestParam(value="name")接收index.jsp传来的name参数值(即zhangsan)，并将参数值（zhangsan）赋值给@RequestParam后面的String name

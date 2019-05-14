@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_Article" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_Common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_Eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_Qa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_adminZuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_comment" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_elasticsearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_friend" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_label" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_sms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project_userZuul" charset="UTF-8" />
+  </component>
+</project>

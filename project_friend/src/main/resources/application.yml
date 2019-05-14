@@ -1,0 +1,44 @@
+server:
+  port: 9006
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9999/eureka
+  instance:
+    prefer-ip-address: true
+
+
+spring:
+  application:
+    name: project-friend
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.77.145.221:3306/project_CSDN?characterEncoding=utf-8
+    username: root
+    password: 0
+  jpa:
+    database: MySQL
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  main:
+    allow-bean-definition-overriding: true
+
+  redis:
+    host: 120.77.145.221
+
+  rabbitmq:
+    host: 120.77.145.221
+
+jwt:
+  config:
+    key: user
+    expire: 360000000000
+
+#熔断保护机制
+feign:
+  hystrix:
+    enabled: true

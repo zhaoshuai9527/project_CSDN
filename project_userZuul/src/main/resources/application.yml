@@ -1,0 +1,70 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: project-userZuul
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9999/eureka
+  instance:
+    prefer-ip-address: true
+
+
+zuul:
+  routes:
+    project-label:
+      path: /label/**  #请求的规则（给请求增加了前缀）
+      serviceId:  project-label #Eureka中服务的id值
+    project-qa:
+      path: /qa/**  #请求的规则（给请求增加了前缀）
+      serviceId:  project-qa #Eureka中服务的id值
+    project-article:
+      path: /article/**  #请求的规则（给请求增加了前缀）
+      serviceId:  project-article #Eureka中服务的id值
+    project-comment:
+      path: /comment/**  #请求的规则（给请求增加了前缀）
+      serviceId:  project-comment #Eureka中服务的id值
+    project-elasticsearch:
+      path: /elasticsearch/**  #请求的规则（给请求增加了前缀）
+      serviceId:  project-elasticsearch #Eureka中服务的id值
+    project-friend:
+      path: /friend/**  #请求的规则（给请求增加了前缀）
+      serviceId:  project-friend #Eureka中服务的id值
+    project-sms:
+      path: /sms/**  #请求的规则（给请求增加了前缀）
+      serviceId:  project-sms #Eureka中服务的id值
+    project-user:
+      path: /user/**  #请求的规则（给请求增加了前缀）
+      serviceId:  project-user #Eureka中服务的id值
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
+jwt:
+  config:
+    key: user
+    expire: 3600000
+
+
+#设置超时时间
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeout-in-milliseconds: 3000
+
+
+
+
+
+
