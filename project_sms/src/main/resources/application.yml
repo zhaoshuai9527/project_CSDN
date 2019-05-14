@@ -16,7 +16,7 @@ spring:
 
 aliyun:
   sms:
-    accessKeyId : LTAIqszfnkm2kP32
-    accessKeySecret : bDjhHu4V6dQVn7bkHFg4MyniVMyfSW
-    templateCode: SMS_163848140
-    signName: 蓝桥培训
+    accessKeyId : **********************************
+    accessKeySecret : ***************************
+    templateCode: *********************************
+    signName: **********************************
